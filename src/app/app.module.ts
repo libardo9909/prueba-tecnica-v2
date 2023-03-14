@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoriesModule } from './ui/categories/categories.module';
+
+import { LoginModule } from './ui/login/login.module';
+import { ShellModule } from './ui/shell/shell.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LoginModule,
+    CategoriesModule,
+    ShellModule
   ],
   providers: [],
   bootstrap: [AppComponent]

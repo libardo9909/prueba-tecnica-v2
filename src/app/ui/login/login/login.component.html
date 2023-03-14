@@ -1,0 +1,55 @@
+<section class="pt-3 pb-6">
+  <div class="auth-box grid">
+    <div class="register-contain col-5 text-center">
+      <div>
+        <h2 class="title-auth">Welcome Back!</h2>
+        <p>Welcome to the pervolare category system, if you already have a user you can log in otherwise you can register</p>
+        <p-button
+          label="SIGN UP"
+          icon="pi pi-id-card"
+          styleClass="p-button-sm border-round-3xl"
+        ></p-button>
+
+        <p>
+          Access data<br>
+          User: admin@admin.com<br>
+          Password: Admin2023*
+        </p>
+      </div>
+    </div>
+    <div class="login-contain col-7 text-center">
+      <div class="grid" [formGroup]="loginForm">
+        <div class="col-12">
+          <h1 class="title-auth">Login</h1>
+          <p>Please enter your username and password and click the login button</p>
+        </div>
+        <div class="col-12">
+          <input
+            type="text"
+            class="p-inputtext-sm form-email"
+            placeholder="Email"
+            formControlName="Email"
+            pInputText
+          />
+        </div>
+        <div class="col-12">
+          <input
+            type="password"
+            class="p-inputtext-sm form-password"
+            placeholder="Password"
+            formControlName="Password"
+            pInputText
+          />
+        </div>
+        <div class="col-12">
+          <p-button
+            label="SIGN IN"
+            icon="pi pi-user"
+            (onClick)="submitLogin()"
+            styleClass="p-button-sm border-round-3xl"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

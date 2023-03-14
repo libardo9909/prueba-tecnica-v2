@@ -1,0 +1,57 @@
+<section class="py-5 px-6">
+  <p-table
+    #dt
+    [value]="categories"
+    dataKey="id"
+    [rowHover]="true"
+    [rows]="10"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[10, 25, 50]"
+    [paginator]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [filterDelay]="0"
+    [globalFilterFields]="['id','code','title','description']"
+  >
+    <ng-template pTemplate="caption">
+      <div class="table-header">
+        List of Categories
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            class="p-inputtext-sm"
+            (input)="dt.filterGlobal($event.target, 'contains')"
+            placeholder="Global Search"
+          />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-cat>
+      <tr>
+        <td>{{ cat.id }}</td>
+        <td>{{ cat.code }}</td>
+        <td>{{ cat.title }}</td>
+        <td>{{ cat.description }}</td>
+        <td>    <p-button
+            icon="pi pi-pencil"
+            styleClass="p-button-sm border-round-3xl mx-2"
+          ></p-button>  
+          <p-button
+          icon="pi pi-trash"
+          styleClass="p-button-sm border-round-3xl mx-2"
+        ></p-button> 
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</section>

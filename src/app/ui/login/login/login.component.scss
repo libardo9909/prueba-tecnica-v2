@@ -1,0 +1,67 @@
+body {
+  background-color: #ecf0f3;
+}
+
+.auth-box {
+  position: relative;
+  width: 1000px;
+  min-width: 1000px;
+  min-height: 600px;
+  height: 600px;
+  background-color: #ecf0f3;
+  box-shadow: 10px 10px 10px #d1d9e6, -10px -10px 10px #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.register-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 50px;
+  z-index: 200;
+  transition: 1.25s;
+  background-color: #ecf0f3;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
+}
+
+.login-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100%;
+  padding: 25px;
+  background-color: #ecf0f3;
+  transition: 1.25s;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-blanco_23-2148817571.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-auth {
+  font-family: "Cera Pro Bold";
+}
+
+.form-password,
+.form-email {
+  &.ng-invalid.ng-touched {
+    border: solid 1px;
+    border-color: #e40104 !important;
+    outline: 1px solid red;
+  }
+}
+
+.form-password,
+.form-email {
+  width: 80%;
+}
+
+header {
+  display: none !important;
+}
